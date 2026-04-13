@@ -14,25 +14,16 @@ It applies conditional checks to classify the password as Weak, Medium, or Stron
 The UI updates dynamically:
 Theo strength bar fills proportionally.
 The t ext displays the current strength.
-o
 This helps users create strong and secure passwords.
-▪
 Strong: At least 8 characters with uppercase, lowercase, numbers, and
 symbols.
 Update strength bar width and color dynamically.
 Display text strength level dynamically.
-•
-•
-•
-o
-o
-o
-o
+
 HTML
 4. Test the password strength checker:
 Code
 Working
-•
 Body
 {
 font-family: Arial, sans-serif;
