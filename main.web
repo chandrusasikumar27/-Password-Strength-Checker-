@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AppuSecure - Password Strength Checker</title>
+<link rel="stylesheet" href="password.css">
+</head>
+<body>
+<div class="container">
+<h2>Password Strength Checker</h2>
+The program continuously monitors the password input.
+It applies conditional checks to classify the password as Weak, Medium, or Strong.
+The UI updates dynamically:
+Theo strength bar fills proportionally.
+The t ext displays the current strength.
+o
+This helps users create strong and secure passwords.
+▪
+Strong: At least 8 characters with uppercase, lowercase, numbers, and
+symbols.
+Update strength bar width and color dynamically.
+Display text strength level dynamically.
+•
+•
+•
+o
+o
+o
+o
+HTML
+4. Test the password strength checker:
+Code
+Working
+•
+Body
+{
+font-family: Arial, sans-serif;
+background-color: #f5f5f5;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+.container
+{
+background: #fff;
+padding: 30px 40px;
+border-radius: 12px;
+<!-- Strength bar -->
+<div class="strength-bar">
+<div id="strength-fill"></div>
+</div>
+<script src="password.js"></script>
+</body>
+</html>
+<!-- Strength text -->
+<div id="strength-text">Strength: </div>
+</div>
+<input type="password" id="password" placeholder="Enter password">
+CSS
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+text-align: center;
+}
+Input
+{
+padding: 10px;
+width: 300px;
+font-size: 16px;
+border-radius: 6px;
+border: 1px solid #ccc;
+margin-bottom: 15px;
+}
+.strength-bar
+{
+width: 300px;
+height: 10px;
+background: #eee;
+border-radius: 6px;
+margin: 10px auto;
+overflow: hidden;
+}
+#strength-fill
+{
+height: 100%;
+width: 0%;
+background: red;
+border-radius: 6px;
+transition: width 0.3s ease, background 0.3s ease;
+}
+#strength-text
+{
+font-weight: bold;
+margin-top: 10px;
+font-size: 16px;
+}
+const passwordInput = document.getElementById('password');
+const strengthText = document.getElementById('strength-text');
+const strengthFill = document.getElementById('strength-fill');
+passwordInput.addEventListener('input', () =>
+{
+const password = passwordInput.value;
+let strength = '';
+let width = 0;
+let color = 'red';
+// Check conditions
+if(password.length === 0){
+strength = '';
+width = 0;
+color = 'red';
+}
+else if(password.length < 6){
+strength = 'Weak';
+width = 33;
+color = 'red';
+}
+else if(password.match(/[a-zA-Z]/) && password.match(/[0-9]/) && password.length
+>= 6)
+JAVA SCRIPT
+{
+strength = 'Medium';
+width = 66;
+color = 'orange';
+}
+if(password.match(/[a-z]/) && password.match(/[A-Z]/) && password.match(/[0-
+9]/)&& password.match(/[\W_]/) && password.length >= 8)
+{
+strength = 'Strong';
+width = 100;
+color = 'green';
+}
+//Update UI
+strengthText.textContent = strength ? `Strength: ${strength}` : '';
+strengthText.style.color = color;
+strengthFill.style.width = width + '%';
+strengthFill.style.background = color;
+});
