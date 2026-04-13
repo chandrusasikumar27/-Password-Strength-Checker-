@@ -1,0 +1,39 @@
+Procedure
+1. Create HTML structure:
+Input field for password entry.
+A container for strength bar.
+A text element to show password strength.
+2. Style the page using CSS:
+Design a clean, modern UI.
+Use colors for different strength levels (Red = Weak, Orange = Medium, Green
+= Strong).
+Addaprogressbarthatchanges dynamically
+3. Add JavaScript for functionality:
+To create a real-time password strength checker using HTML, CSS, and
+JavaScript that validates passwords and displays their strength as Weak,
+Medium, or Strong.
+
+Input field for password entry.
+A container for strength bar.
+A text element to show password strength.
+Capture input from the password field using the input event.
+Check conditions for password strength:
+Weak: Less than 6 characters.
+Medium: At least 6 characters with letters and numbers.
+Strong: At least 8 characters with uppercase, lowercase, numbers, and
+symbols.
+Update strength bar width and color dynamically.
+Display text strength level dynamically.
+4. Test the password strength checker:
+Enter different types of passwords.
+Observe the strength bar and text update in real-time
+Working
+The program continuously monitors the password input.
+It applies conditional checks to classify the password as Weak, Medium, or Strong.
+The UI updates dynamically:
+Theo strength bar fills proportionally.
+The t ext displays the current strength.
+o
+This helps users create strong and secure passwords.
+
+
